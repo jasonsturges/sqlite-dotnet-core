@@ -15,7 +15,7 @@ This solution is divided into three projects:
 
 ## Concepts
 
-There are the following concepts within this example console application project:
+The following concepts are demonstrated within this example console application project:
 - SQLite Entity Framework
 - Dependency Injection
 
