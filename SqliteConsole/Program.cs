@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Extensions.Configuration;
 
 namespace SqliteConsole
 {
@@ -6,7 +7,10 @@ namespace SqliteConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Configuration
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            var configuration = builder.Build();
         }
     }
 }
