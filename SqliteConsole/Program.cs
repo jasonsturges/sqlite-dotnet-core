@@ -43,7 +43,7 @@ namespace SqliteConsole
 
             logger.LogInformation($"Starting application at: {DateTime.Now}");
 
-            // Services
+            // Example Service
             var service = services.GetService<IExampleService>();
             service.AddExample("Test A");
             service.AddExample("Test B");
