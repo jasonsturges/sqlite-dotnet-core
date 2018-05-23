@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using SqliteConsole.Infrastructure.Data;
 
 namespace SqliteConsole
@@ -24,8 +25,19 @@ namespace SqliteConsole
 
             // Services
             var services = new ServiceCollection()
+                .AddLogging()
                 .AddDbContextPool<SqliteConsoleContext>(options => options.UseSqlite(configuration.GetConnectionString("DefaultConnection")))
                 .BuildServiceProvider();
+
+            // Logging
+            services
+                .GetService<ILoggerFactory>()
+                .AddConsole(LogLevel.Trace);
+
+            var logger = services.GetService<ILoggerFactory>()
+                .CreateLogger<Program>();
+
+            logger.LogInformation($"Starting application at: {DateTime.Now}");
         }
     }
 }
