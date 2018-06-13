@@ -5,9 +5,14 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole", "SqliteConsole\SqliteConsole.csproj", "{1B9003BE-8787-4B53-BD4D-3F9C2B3A0249}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteConsole.Core", "SqliteConsole.Core\SqliteConsole.Core.csproj", "{92E809AE-FBA0-4812-B2D6-18A27F9073C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole.Core", "SqliteConsole.Core\SqliteConsole.Core.csproj", "{92E809AE-FBA0-4812-B2D6-18A27F9073C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteConsole.Infrastructure", "SqliteConsole.Infrastructure\SqliteConsole.Infrastructure.csproj", "{64116873-2D69-40FA-9FF8-4308896B33FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole.Infrastructure", "SqliteConsole.Infrastructure\SqliteConsole.Infrastructure.csproj", "{64116873-2D69-40FA-9FF8-4308896B33FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD042742-F62F-4985-8647-30CC6111D376}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
