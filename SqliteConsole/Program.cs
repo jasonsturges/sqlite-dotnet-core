@@ -26,17 +26,15 @@ namespace SqliteConsole
 
             // Services
             var services = new ServiceCollection()
-                .AddLogging()
+                .AddLogging(loggingBuilder =>
+                {
+                    loggingBuilder.AddConsole();
+                })
                 .AddSingleton(configuration)
                 .AddSingleton(optionsBuilder.Options)
                 .AddSingleton<IExampleService, ExampleService>()
                 .AddDbContextPool<SqliteConsoleContext>(options => options.UseSqlite(configuration.GetConnectionString("DefaultConnection")))
                 .BuildServiceProvider();
-
-            // Logging
-            services
-                .GetService<ILoggerFactory>()
-                .AddConsole(LogLevel.Trace);
 
             var logger = services.GetService<ILoggerFactory>()
                 .CreateLogger<Program>();
