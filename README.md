@@ -1,5 +1,5 @@
-# SQLite .NET Core 2.1 Console App
-.NET Core 2.1 Console Application using SQLite with Entity Framework and Dependency Injection
+# SQLite .NET Core 3.1 Console App
+.NET Core 3.1 Console Application using SQLite with Entity Framework and Dependency Injection
 
 This example shows how to incorporate ASP.NET concepts such as dependency injection within a console application using [VS Code](https://code.visualstudio.com/) on Mac OS X / macOS or linux targets.
 
