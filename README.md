@@ -3,7 +3,7 @@
 
 This example shows how to incorporate ASP.NET concepts such as dependency injection within a console application using [VS Code](https://code.visualstudio.com/) on Mac OS X / macOS or linux targets.
 
-![vscode](http://labs.jasonsturges.com/coreclr/sqlite-dotnet-core.png)
+![vscode](https://labs.jasonsturges.com/coreclr/sqlite-dotnet-core.png)
 
 ## Project Structure
 
