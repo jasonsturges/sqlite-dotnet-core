@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole", "SqliteCons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteConsole.Core", "SqliteConsole.Core\SqliteConsole.Core.csproj", "{2CEE3505-40EF-4785-AA59-72D9D0042CBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteConsole.Infrastructure", "SqliteConsole.Infrastructure\SqliteConsole.Infrastructure.csproj", "{716B14C2-A633-46A1-972E-7D740B4D3829}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2CEE3505-40EF-4785-AA59-72D9D0042CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CEE3505-40EF-4785-AA59-72D9D0042CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CEE3505-40EF-4785-AA59-72D9D0042CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{716B14C2-A633-46A1-972E-7D740B4D3829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716B14C2-A633-46A1-972E-7D740B4D3829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716B14C2-A633-46A1-972E-7D740B4D3829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716B14C2-A633-46A1-972E-7D740B4D3829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
