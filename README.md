@@ -1,7 +1,7 @@
 # SQLite .NET 7 Console App
 .NET 7.0 Console Application using SQLite with Entity Framework and Dependency Injection
 
-This example shows how to incorporate ASP.NET concepts such as dependency injection within a console application using [VS Code](https://code.visualstudio.com/) on Mac OS X / macOS or linux targets.
+This example shows how to incorporate ASP.NET concepts such as dependency injection within a console application using [VS Code](https://code.visualstudio.com/) on macOS or linux targets.
 
 ![vscode](https://user-images.githubusercontent.com/1213591/106406012-9d305c00-63fd-11eb-98e0-c2a0fca08afe.png)
 
@@ -23,42 +23,51 @@ The following concepts are demonstrated within this example console application 
 
 Using dependency injection, the database context can be passed to a constructor of a class:
 
-    public class ExampleService : IExampleService
-    {
-        private readonly SqliteConsoleContext context;
+```cs
+public class ExampleService : IExampleService
+{
+    private readonly SqliteConsoleContext context;
 
-        public ExampleService(SqliteConsoleContext sqliteConsoleContext)
-        {
-            context = sqliteConsoleContext;
-        }
+    public ExampleService(SqliteConsoleContext sqliteConsoleContext)
+    {
+        context = sqliteConsoleContext;
+    }
+```
 
 This way, the context may be used as follows:
 
-        public void GetExamples()
-        {
-            var examples = context.Examples
-                .OrderBy(e => e.Name)
-                .ToList();
+```cs
+    public void GetExamples()
+    {
+        var examples = context.Examples
+            .OrderBy(e => e.Name)
+            .ToList();
+```
 
 Otherwise, there's a factory method to instantiate new contexts:
 
-        using (var context = SqliteConsoleContextFactory.Create(config.GetConnectionString("DefaultConnection")))
-        {
-            var examples = context.Examples
-                .OrderBy(e => e.Name)
-                .ToList();
-        }
+```cs
+    using (var context = SqliteConsoleContextFactory.Create(config.GetConnectionString("DefaultConnection")))
+    {
+        var examples = context.Examples
+            .OrderBy(e => e.Name)
+            .ToList();
+    }
+```
         
 ### Dependency Injection
 
 Service classes are added to the main console application's Program.cs:
 
-    // Services
-    var services = new ServiceCollection()
-        .AddSingleton<IExampleService, ExampleService>()
-        .BuildServiceProvider();
+```cs
+// Services
+var services = new ServiceCollection()
+    .AddSingleton<IExampleService, ExampleService>()
+    .BuildServiceProvider();
+```
 
 Then, obtain the instance of the service as:
 
-    var service = services.GetService<IExampleService>();
-
+```cs
+var service = services.GetService<IExampleService>();
+```
