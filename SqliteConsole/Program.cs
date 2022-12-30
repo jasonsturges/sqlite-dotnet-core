@@ -34,7 +34,7 @@ namespace SqliteConsole
                 .AddDbContextPool<SqliteConsoleContext>(options => options.UseSqlite(configuration.GetConnectionString("DefaultConnection")))
                 .BuildServiceProvider();
 
-            var logger = services.GetService<ILoggerFactory>()
+            var logger = (services.GetService<ILoggerFactory>() ?? throw new InvalidOperationException())
                 .CreateLogger<Program>();
 
             logger.LogInformation($"Starting application at: {DateTime.Now}");
