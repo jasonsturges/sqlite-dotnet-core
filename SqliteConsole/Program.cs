@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using SqliteConsole.Infrastructure.Data;
 
 namespace SqliteConsole
@@ -19,6 +20,11 @@ namespace SqliteConsole
                 .UseSqlite(configuration.GetConnectionString("DefaultConnection"));
             var context = new SqliteConsoleContext(optionsBuilder.Options);
             context.Database.EnsureCreated();
+
+            // Services
+            var services = new ServiceCollection()
+                .AddDbContextPool<SqliteConsoleContext>(options => options.UseSqlite(configuration.GetConnectionString("DefaultConnection")))
+                .BuildServiceProvider();
         }
     }
 }
