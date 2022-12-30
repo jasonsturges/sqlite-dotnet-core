@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -41,10 +41,10 @@ namespace SqliteConsole
 
             // Example Service
             var service = services.GetService<IExampleService>();
-            service.AddExample("Test A");
-            service.AddExample("Test B");
-            service.AddExample("Test C");
-            service.GetExamples();
+            service?.AddExample("Test A");
+            service?.AddExample("Test B");
+            service?.AddExample("Test C");
+            service?.GetExamples();
         }
     }
 }
