@@ -1,6 +1,4 @@
-﻿using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -36,17 +34,17 @@ namespace SqliteConsole
                 .AddDbContextPool<SqliteConsoleContext>(options => options.UseSqlite(configuration.GetConnectionString("DefaultConnection")))
                 .BuildServiceProvider();
 
-            var logger = services.GetService<ILoggerFactory>()
+            var logger = (services.GetService<ILoggerFactory>() ?? throw new InvalidOperationException())
                 .CreateLogger<Program>();
 
             logger.LogInformation($"Starting application at: {DateTime.Now}");
 
             // Example Service
             var service = services.GetService<IExampleService>();
-            service.AddExample("Test A");
-            service.AddExample("Test B");
-            service.AddExample("Test C");
-            service.GetExamples();
+            service?.AddExample("Test A");
+            service?.AddExample("Test B");
+            service?.AddExample("Test C");
+            service?.GetExamples();
         }
     }
 }
