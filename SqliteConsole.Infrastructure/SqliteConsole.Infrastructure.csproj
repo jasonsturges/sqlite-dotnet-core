@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SqliteConsole.Core\SqliteConsole.Core.csproj" />
+  </ItemGroup>
+
 </Project>
