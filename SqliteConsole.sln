@@ -1,13 +1,13 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole", "SqliteConsole\SqliteConsole.csproj", "{E9E40020-23EB-4113-9EFC-01F7CDA383BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteConsole.Core", "SqliteConsole.Core\SqliteConsole.Core.csproj", "{2CEE3505-40EF-4785-AA59-72D9D0042CBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole.Core", "SqliteConsole.Core\SqliteConsole.Core.csproj", "{2CEE3505-40EF-4785-AA59-72D9D0042CBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteConsole.Infrastructure", "SqliteConsole.Infrastructure\SqliteConsole.Infrastructure.csproj", "{716B14C2-A633-46A1-972E-7D740B4D3829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole.Infrastructure", "SqliteConsole.Infrastructure\SqliteConsole.Infrastructure.csproj", "{716B14C2-A633-46A1-972E-7D740B4D3829}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

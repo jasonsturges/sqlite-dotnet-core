@@ -1,5 +1,5 @@
-# SQLite .NET 7 Console App
-.NET 7.0 Console Application using SQLite with Entity Framework and Dependency Injection
+# SQLite .NET 8 Console App
+.NET 8.0 Console Application using SQLite with Entity Framework and Dependency Injection
 
 This example shows how to incorporate ASP.NET concepts such as dependency injection within a console application using [VS Code](https://code.visualstudio.com/) on macOS or linux targets.
 
